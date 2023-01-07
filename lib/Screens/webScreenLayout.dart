@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsup/widgets/contact_list.dart';
+import 'package:whatsup/widgets/web_profile_bar.dart';
 
 
 class WebScreenLayOut extends StatelessWidget {
@@ -11,23 +12,27 @@ class WebScreenLayOut extends StatelessWidget {
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Column(
-            children: [
-              //Web Profile Bar
-              //Web Search Bar
-              ContactList(),
-            ],
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  //Web Profile Bar
+                  WebProfileBar(),
+                  //Web Search Bar
+                  ContactList(),
+                ],
+              ),
+            ),
           ),
           //WEB SCREEN
+          
           Container(
-            width: MediaQuery.of(context).size.width * 0.75,
+            width: MediaQuery.of(context).size.width*0.75,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(
-                  "assets/backgroundImage.png"
-                ),
+                image: AssetImage('/home/ubantu/Luminar_Nov/WhatsupUI/whatsup/assets/backgroundImage.png'),
                 fit: BoxFit.cover,
-              ),
+              )
             ),
           ),
         ],
