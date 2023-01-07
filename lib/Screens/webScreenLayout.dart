@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsup/widgets/contact_list.dart';
+import 'package:whatsup/widgets/web_chat_app_bar.dart';
 import 'package:whatsup/widgets/web_profile_bar.dart';
 import 'package:whatsup/widgets/web_search_bar.dart';
 
@@ -36,6 +37,14 @@ class WebScreenLayOut extends StatelessWidget {
                 image: AssetImage('/home/ubantu/Luminar_Nov/WhatsupUI/whatsup/assets/backgroundImage.png'),
                 fit: BoxFit.cover,
               )
+            ),
+            child: Column(
+              children: [
+                //! CHAT APP BAR
+                WebChatAppBar(),
+                //! CHAT LIST
+                //! MESSAGE INPUT BOX
+              ],
             ),
           ),
         ],
