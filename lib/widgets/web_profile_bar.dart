@@ -31,9 +31,19 @@ class WebProfileBar extends StatelessWidget {
               IconButton(
                   onPressed: () {},
                   icon: const Icon(
+                    Icons.people,
+                    color: Colors.grey,
+                  )),
+
+              
+
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
                     Icons.comment,
                     color: Colors.grey,
                   )),
+                      
               IconButton(
                   onPressed: () {},
                   icon: const Icon(
